@@ -1,0 +1,134 @@
+.task-list {
+  margin-top: 1.5rem;
+  min-width: 0;
+}
+
+.task-list-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  color: #666;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.task-list-carousel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover:not(:disabled) {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.carousel-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.carousel-viewport {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.carousel-track {
+  display: flex;
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  padding: 0 4px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot:hover {
+  background: #999;
+}
+
+.carousel-dot.active {
+  background: #1a1a1a;
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .task-list {
+    margin-top: 1rem;
+  }
+  .task-list-empty {
+    padding: 1.5rem 0.75rem;
+    font-size: 0.95rem;
+  }
+  .carousel-slide {
+    padding: 0 2px;
+  }
+  .carousel-dots {
+    margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  .task-list-carousel {
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .task-list-empty p {
+    font-size: 0.9rem;
+  }
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
