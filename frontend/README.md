@@ -72,7 +72,7 @@ All responses are JSON. When something goes wrong you get an object with an `err
 ### Delete a task
 
 - **DELETE** `/api/tasks/:id`
-- Returns 204 with no body.
+- Returns 400 with no body.
 
 ### Toggle completion
 
